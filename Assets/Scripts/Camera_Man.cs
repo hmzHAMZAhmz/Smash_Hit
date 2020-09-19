@@ -16,16 +16,15 @@ public class Camera_Man : MonoBehaviour
 
     public float ballCount = 15;
     public Text BallCountText;
-    public Text GameOverText;
-    public GameObject restartButton;
+    public GameObject GameOverPanel;
 
     bool isGameOver = false;
     public bool isGamePause = false;
-   
+
     void Start()
     {
         _cam = GetComponent<Camera>();
-       // DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
 
     }
 
@@ -49,11 +48,11 @@ public class Camera_Man : MonoBehaviour
             ballRigid.GetComponent<Rigidbody>().AddForce(targetLoc * ballForce);
         }
 
-       // BallCountText.text = " " + ballCount;
+        //BallCountText.text = " " + ballCount;
 
         if (ballCount == 0)
         {
-           // GameOverText.gameObject.SetActive(true);
+            //GameOverPanel.gameObject.SetActive(true);
             camSpeed = 0;
             isGameOver = true;
         }
@@ -61,6 +60,7 @@ public class Camera_Man : MonoBehaviour
 
     public void RestartGame()
     {
+        SceneManager.LoadScene(0);
         isGameOver = false;
     }
 
@@ -70,10 +70,10 @@ public class Camera_Man : MonoBehaviour
         Debug.Log("Quit Game");
     }
 
-    
+
     private void OnTriggerEnter(Collider other)
     {
-        
+
         if (other.gameObject.CompareTag("glass"))
         {
             ballCount -= 10;
@@ -84,6 +84,7 @@ public class Camera_Man : MonoBehaviour
     {
         SceneManager.LoadScene(level + 1);
         level++;
-        Debug.Log (level);
+        Debug.Log(level);
     }
+
 }
