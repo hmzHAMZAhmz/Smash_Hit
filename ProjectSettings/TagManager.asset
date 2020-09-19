@@ -9,6 +9,8 @@ TagManager:
   - TapIn
   - glass
   - destructive
+  - Crown
+  - hitobstacle
   layers:
   - Default
   - TransparentFX

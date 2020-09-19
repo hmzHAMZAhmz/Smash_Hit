@@ -6751,7 +6751,10 @@ GameObject:
   m_Component:
   - component: {fileID: 953808391}
   - component: {fileID: 953808390}
+  - component: {fileID: 953808394}
   - component: {fileID: 953808389}
+  - component: {fileID: 953808393}
+  - component: {fileID: 953808392}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6824,6 +6827,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &953808392
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953808388}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &953808393
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953808388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &953808394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953808388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfea98bd5ac86044937b823317b1aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnHelper: 4.5
+  ball: {fileID: 2909683042583690496, guid: ff26f47c8624b9a48bed41547f10d062, type: 3}
+  ballForce: 4000
+  camSpeed: 0
+  ballCount: 15
+  BallCountText: {fileID: 0}
+  GameOverText: {fileID: 0}
+  restartButton: {fileID: 0}
+  isGamePause: 0
 --- !u!1 &971421930
 GameObject:
   m_ObjectHideFlags: 0
