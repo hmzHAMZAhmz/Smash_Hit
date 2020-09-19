@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4159077915998479756}
   - component: {fileID: 4159077915999577932}
   - component: {fileID: 4159077915995215660}
-  - component: {fileID: 3119182554662926423}
+  - component: {fileID: 5506130476917971309}
   m_Layer: 0
   m_Name: glassplate_whole
   m_TagString: glass
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4159077916001515916}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.2547221, y: 9, z: 25.29634}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,7 +94,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5ae2ebe0b41d8194db9af3140c9add78, type: 3}
---- !u!114 &3119182554662926423
+--- !u!114 &5506130476917971309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,8 +103,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4159077916001515916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a6403da34aff7489865be6c41ca2e1, type: 3}
+  m_Script: {fileID: 11500000, guid: e377802f974f7124bbf2c69308f11c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredObject:
-  - {fileID: 5132501011515633199, guid: 3496aa28775708244892ae76f1a036bc, type: 3}
+  destroyedVersion: {fileID: 5132501011515633199, guid: 3496aa28775708244892ae76f1a036bc,
+    type: 3}

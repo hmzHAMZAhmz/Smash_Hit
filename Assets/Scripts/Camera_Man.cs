@@ -11,35 +11,50 @@ public class Camera_Man : MonoBehaviour
     public float ballForce;
     public float camSpeed;
 
+    public Animator leftdoor;
+    public Animator rightdoor;
+
     private Camera _cam;
 
     public float ballCount = 15;
     public Text BallCountText;
     public Text GameOverText;
     public GameObject restartButton;
+    public GameObject finishPanel;
+    public int passedDoor;
 
     bool isGameOver = false;
     public bool isGamePause = false;
+    bool isGameFinished = false;
 
     void Start()
     {
         _cam = GetComponent<Camera>();
+        //leftdoor = GameObject.FindGameObjectWithTag("left_door").GetComponent<Animator>();
+        //rightdoor = GameObject.FindGameObjectWithTag("right_door").GetComponent<Animator>();
     }
+
     private void Update()
     {
-        if (isGamePause)
+        if (isGamePause && isGameFinished)
         {
             camSpeed = 0;
         }
+        else if (transform.position.z < 440)
+        {
+            camSpeed = 3;
+        }
         else
         {
-            camSpeed = 15;
+            camSpeed = 5.5f;
         }
+
+
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1 * camSpeed);
 
         Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetMouseButtonDown(0) && !isGameOver && !isGamePause)
+        if (Input.GetMouseButtonDown(0) && !isGameOver && !isGamePause && !isGameFinished)
         {
             GameObject ballRigid;
             ballRigid = Instantiate(ball, transform.position, transform.rotation) as GameObject;
@@ -56,6 +71,7 @@ public class Camera_Man : MonoBehaviour
             camSpeed = 0;
             isGameOver = true;
         }
+        Debug.Log(Time.time);
     }
 
     public void RestartGame()
@@ -68,5 +84,41 @@ public class Camera_Man : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit Game");
+    }
+
+    public void DoorAnim()
+    {
+        if (passedDoor == 0)
+        {
+            leftdoor.SetTrigger("doorbutton");
+            rightdoor.SetTrigger("doorbutton");
+        }
+        else
+        {
+            leftdoor.SetTrigger("doorbutton" + passedDoor);
+            rightdoor.SetTrigger("doorbutton" + passedDoor);
+        }
+
+        Debug.Log("door is open");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("left_door"))
+        {
+            ballCount -= 10;
+
+        }
+
+        if (other.gameObject.CompareTag("glassobstacle"))
+        {
+            ballCount -= 10;
+        }
+
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            finishPanel.gameObject.SetActive(true);
+            isGameFinished = true;
+        }
     }
 }

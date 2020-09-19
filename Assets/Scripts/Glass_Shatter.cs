@@ -4,24 +4,11 @@ using UnityEngine;
 
 public class Glass_Shatter : MonoBehaviour
 {
-    public GameObject[] shatteredObject;
-    void Start()
-    {
+    public GameObject destroyedVersion;
 
+    private void OnMouseDown()
+    {
+        Instantiate(destroyedVersion, transform.position, transform.rotation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("destructive")) 
-        {
-            int objectIndex = Random.Range(0, shatteredObject.Length);
-            Instantiate(shatteredObject[objectIndex], transform.position, shatteredObject[objectIndex].transform.rotation);
-            Destroy(gameObject);
-        }
-    }
 }

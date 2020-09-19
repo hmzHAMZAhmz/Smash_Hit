@@ -10460,13 +10460,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377486659}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.65, y: 2.04, z: 6.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1505343498}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &377486661
 Light:
   m_ObjectHideFlags: 0
@@ -10478,10 +10478,10 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.6740807, g: 0.35955858, b: 0.754717, a: 1}
-  m_Intensity: 2
-  m_Range: 10
-  m_SpotAngle: 179
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 30
+  m_Range: 36.59
+  m_SpotAngle: 108.93089
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -39708,6 +39708,9 @@ GameObject:
   - component: {fileID: 1505343498}
   - component: {fileID: 1505343497}
   - component: {fileID: 1505343496}
+  - component: {fileID: 1505343499}
+  - component: {fileID: 1505343501}
+  - component: {fileID: 1505343500}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -39781,6 +39784,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
+--- !u!114 &1505343499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505343495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfea98bd5ac86044937b823317b1aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnHelper: 4.5
+  ball: {fileID: 2909683042583690496, guid: ff26f47c8624b9a48bed41547f10d062, type: 3}
+  ballForce: 4500
+  camSpeed: 0
+  ballCount: 15
+  BallCountText: {fileID: 0}
+  GameOverText: {fileID: 0}
+  restartButton: {fileID: 0}
+  isGamePause: 0
+--- !u!135 &1505343500
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505343495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1505343501
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505343495}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1506410563
 GameObject:
   m_ObjectHideFlags: 0
