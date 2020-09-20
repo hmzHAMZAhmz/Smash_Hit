@@ -10,7 +10,7 @@ public class Camera_Man : MonoBehaviour
     public GameObject ball;
     public float ballForce;
     public float camSpeed;
-    private int level = 0;
+    public Text winText;
 
     private Camera _cam;
 
@@ -25,7 +25,6 @@ public class Camera_Man : MonoBehaviour
     {
         _cam = GetComponent<Camera>();
         // DontDestroyOnLoad(this.gameObject);
-
     }
 
     private void Update()
@@ -50,7 +49,7 @@ public class Camera_Man : MonoBehaviour
 
         BallCountText.text = " " + ballCount;
 
-        if (ballCount == 0)
+        if (ballCount == 0 || ballCount < 0)
         {
             GameOverPanel.gameObject.SetActive(true);
             camSpeed = 0;
@@ -73,18 +72,15 @@ public class Camera_Man : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.CompareTag("Crown"))
+        {
+            isGameOver = true;
+            GameOverPanel.SetActive(true);
+        }
         if (other.gameObject.CompareTag("glass"))
         {
             ballCount -= 10;
         }
-    }
-
-    public void LevelUp()
-    {
-        SceneManager.LoadScene(level + 1);
-        level++;
-        Debug.Log(level);
     }
 
 }

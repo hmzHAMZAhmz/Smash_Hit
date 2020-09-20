@@ -6,9 +6,10 @@ public class Glass_Shatter : MonoBehaviour
 {
     public GameObject destroyedVersion;
 
-    private void OnMouseDown()
+    private void OnTriggerEnter(Collider other)
     {
         Instantiate(destroyedVersion, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
 }
