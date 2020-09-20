@@ -48,11 +48,11 @@ public class Camera_Man : MonoBehaviour
             ballRigid.GetComponent<Rigidbody>().AddForce(targetLoc * ballForce);
         }
 
-        //BallCountText.text = " " + ballCount;
+        BallCountText.text = " " + ballCount;
 
         if (ballCount == 0)
         {
-            //GameOverPanel.gameObject.SetActive(true);
+            GameOverPanel.gameObject.SetActive(true);
             camSpeed = 0;
             isGameOver = true;
         }

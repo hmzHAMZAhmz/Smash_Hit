@@ -239,7 +239,7 @@ RectTransform:
   m_GameObject: {fileID: 274031192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.70460165, y: 0.70460165, z: 0.70460165}
   m_Children:
   - {fileID: 1079207598}
   - {fileID: 311066856}
@@ -249,7 +249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.37662, y: -170}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &274031194
@@ -645,7 +645,7 @@ RectTransform:
   m_GameObject: {fileID: 848165899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.50936, y: 0.50936, z: 0.50936}
   m_Children:
   - {fileID: 757399763}
   m_Father: {fileID: 1404244799}
@@ -653,7 +653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000017166, y: -138}
+  m_AnchoredPosition: {x: -0.000017166, y: -142.17}
   m_SizeDelta: {x: 172.1, y: 92.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848165901
@@ -801,8 +801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000091553}
-  m_SizeDelta: {x: 800, y: 1731.4}
+  m_AnchoredPosition: {x: 0.0000038147, y: -0.00024033}
+  m_SizeDelta: {x: 800, y: 449.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890985237
 MonoBehaviour:
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e9beb7259333864aa1889036bb60bc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e0d8f1e7dbc9204dbcca2230573c2d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1170,7 +1170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1459572769}
   m_Layer: 5
-  m_Name: Skeb Logo
+  m_Name: SKEB Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1226,7 @@ RectTransform:
   m_GameObject: {fileID: 1588923400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.51668, y: 0.51668, z: 0.51668}
   m_Children:
   - {fileID: 45286063}
   m_Father: {fileID: 1404244799}
@@ -1234,7 +1234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -65}
   m_SizeDelta: {x: 322.5, y: 138.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1588923402
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
